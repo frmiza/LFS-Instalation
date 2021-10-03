@@ -9,11 +9,16 @@ do
   MD5=` jq -r ".package[$i].md5" packages.json`
 
   CACHEFILE="$(basename "$URL")"
-  
-  echo NAME $NAME
-  echo VERSION $VERSION
-  echo URL $URL
-  echo MD5 $MD5
-  echo CACHEFILE $CACHEFILE
-  echo "========================================="
+
+  if [ ! -f "$CACHEFILE" ]; then
+
+    echo "Downloading $URL"
+    wget "$URL"
+    if ! echo $MD5 $CACHEFILE | md5sum -c > /dev/null; then
+      rm -f $CACHEFILE
+      echo "faliled!! MD5sun of $CACHEFILE mismatch"
+      exit 1
+    fi
+  fi
+
 done

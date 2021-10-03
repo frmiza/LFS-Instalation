@@ -34,7 +34,7 @@
     {
       "name": "bc",
       "version": "5.0.0",
-      "url": " https://github.com/gavinhoward/bc/releases/download/@/bc-@.tar.xz",
+      "url": "https://github.com/gavinhoward/bc/releases/download/@/bc-@.tar.xz",
       "md5": "8345bb81c576ddfc8c27e0842370603c"
     },
     {
@@ -106,7 +106,7 @@
     {
       "name": "expect",
       "version": "5.45.4",
-      "url": " https://prdownloads.sourceforge.net/expect/expect@.tar.gz",
+      "url": "https://prdownloads.sourceforge.net/expect/expect5.45.4.tar.gz",
       "md5": "00fce8de158422f5ccd2666512329bd2"
     },
     {
@@ -178,7 +178,7 @@
     {
       "name": "groff",
       "version": "1.22.4",
-      "url": " https://ftp.gnu.org/gnu/groff/groff-@.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/groff/groff-@.tar.gz",
       "md5": "08fb04335e2f5e73f23ea4c3adbf0c5f"
     },
     {
@@ -220,7 +220,7 @@
     {
       "name": "kbd",
       "version": "2.4.0",
-      "url": " https://www.kernel.org/pub/linux/utils/kbd/kbd-@.tar.xz",
+      "url": "https://www.kernel.org/pub/linux/utils/kbd/kbd-@.tar.xz",
       "md5": "3cac5be0096fcf7b32dcbd3c53831380"
     },
     {
@@ -268,7 +268,7 @@
     {
       "name": "linux",
       "version": "5.13.12",
-      "url": " https://www.kernel.org/pub/linux/kernel/v5.x/linux-@.tar.xz",
+      "url": "https://www.kernel.org/pub/linux/kernel/v5.x/linux-@.tar.xz",
       "md5": "6e1728b2021ca19cc9273f080e6c44c7"
     },
     {
@@ -292,7 +292,7 @@
     {
       "name": "man-pages",
       "version": "5.12",
-      "url": " https://www.kernel.org/pub/linux/docs/man-pages/man-pages-@.tar.xz",
+      "url": "https://www.kernel.org/pub/linux/docs/man-pages/man-pages-@.tar.xz",
       "md5": "192132118f07369c88df267a92f3ef16"
     },
     {
@@ -311,7 +311,7 @@
       "name": "mpfr",
       "version": "4.1.0",
       "url": "https://www.mpfr.org/mpfr-@/mpfr-@.tar.xz",
-      "md5": ""
+      "md5": "bdd3d5efba9c17da8d83a35ec552baef"
     },
     {
       "name": "ncurses",
@@ -346,7 +346,7 @@
     {
       "name": "pkg-config",
       "version": "0.29.2",
-      "url": " https://pkg-config.freedesktop.org/releases/pkg-config-@.tar.gz",
+      "url": "https://pkg-config.freedesktop.org/releases/pkg-config-@.tar.gz",
       "md5": "f6e931e319531b736fadc017f470e68a"
     },
     {
@@ -448,13 +448,13 @@
     {
       "name": "vim",
       "version": "8.2.3337",
-      "url": " https://anduin.linuxfromscratch.org/LFS/vim-@.tar.gz",
+      "url": "https://anduin.linuxfromscratch.org/LFS/vim-@.tar.gz",
       "md5": "e0325a4988b1b99b9c2e46fa853c1980"
     },
     {
       "name": "xml::parser",
       "version": "2.46",
-      "url": " https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-@.tar.gz",
+      "url": "https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-@.tar.gz",
       "md5": "80bb18a8e6240fcf7ec2f7b57601c170"
     },
     {
@@ -472,7 +472,7 @@
     {
       "name": "zstd",
       "version": "1.5.0",
-      "url": " https://github.com/facebook/zstd/releases/download/v@/zstd-@.tar.gz",
+      "url": "https://github.com/facebook/zstd/releases/download/v@/zstd-@.tar.gz",
       "md5": "a6eb7fb1f2c21fa80030a47993853e92"
     }
   ]
