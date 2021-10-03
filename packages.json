@@ -15,7 +15,7 @@
     },
     {
       "name": "autoconf",
-      "version": "2.71"
+      "version": "2.71",
       "url": "https://ftp.gnu.org/gnu/autoconf/autoconf-@.tar.xz",
       "md5": "12cfa1687ffa2606337efe1a64416106"
     },

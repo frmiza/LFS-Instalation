@@ -22,3 +22,9 @@ mkdir -pv $LFS/{boot,etc,bin,lib,sbin,usr,var}
 case $(uname -m) in # check if we are compiling to a x86_64 machine
   x86_64) mkdir -pv $LFS/lib64 ;;
 esac
+
+cp -rf *.sh packages.json "$LFS/sources"
+cd "$LFS/sources"
+export PATH="$LFS/tools/bin:$PATH"
+
+source download.sh
