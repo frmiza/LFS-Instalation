@@ -1,0 +1,479 @@
+{
+  "amount":78,
+  "package":[
+    {
+      "name": "acl",
+      "version": "2.3.1",
+      "url": "https://download.savannah.gnu.org/releases/acl/acl-@.tar.xz",
+      "md5": "95ce715fe09acca7c12d3306d0f076b2"
+    },
+    {
+      "name": "attr",
+      "version": "2.5.1",
+      "url": "https://download.savannah.gnu.org/releases/attr/attr-@.tar.gz",
+      "md5": "ac1c5a7a084f0f83b8cace34211f64d8"
+    },
+    {
+      "name": "autoconf",
+      "version": "2.71"
+      "url": "https://ftp.gnu.org/gnu/autoconf/autoconf-@.tar.xz",
+      "md5": "12cfa1687ffa2606337efe1a64416106"
+    },
+    {
+      "name": "automake ",
+      "version": "1.16.4",
+      "url": "https://ftp.gnu.org/gnu/automake/automake-@.tar.xz",
+      "md5": "86e8e682bd74e6390a016c4d9c11267c"
+    },
+    {
+      "name": "bash",
+      "version": "5.1.8",
+      "url": "https://ftp.gnu.org/gnu/bash/bash-@.tar.gz",
+      "md5": "23eee6195b47318b9fd878e590ccb38c"
+    },
+    {
+      "name": "bc",
+      "version": "5.0.0",
+      "url": " https://github.com/gavinhoward/bc/releases/download/@/bc-@.tar.xz",
+      "md5": "8345bb81c576ddfc8c27e0842370603c"
+    },
+    {
+      "name": "binutils",
+      "version": "2.37",
+      "url": "https://ftp.gnu.org/gnu/binutils/binutils-@.tar.xz",
+      "md5": "e78d9ff2976b745a348f4c1f27c77cb1"
+    },
+    {
+      "name": "bison",
+      "version": "3.7.6",
+      "url": "https://ftp.gnu.org/gnu/bison/bison-@.tar.xz",
+      "md5": "d61aa92e3562cb7292b004ce96173cf7"
+    },
+    {
+      "name": "bzip2",
+      "version": "1.0.8",
+      "url": "https://www.sourceware.org/pub/bzip2/bzip2-@.tar.gz",
+      "md5": "67e051268d0c475ea773822f7500d0e5"
+    },
+    {
+      "name": "check",
+      "version": "0.15.2",
+      "url": "https://github.com/libcheck/check/releases/download/@/check-@.tar.gz",
+      "md5": "50fcafcecde5a380415b12e9c574e0b2"
+    },
+    {
+      "name": "coreutils",
+      "version": "8.32",
+      "url": "https://ftp.gnu.org/gnu/coreutils/coreutils-@.tar.xz",
+      "md5": "022042695b7d5bcf1a93559a9735e668"
+    },
+    {
+      "name": "dejagnu",
+      "version": "1.6.3",
+      "url": "https://ftp.gnu.org/gnu/dejagnu/dejagnu-@.tar.gz",
+      "md5": "68c5208c58236eba447d7d6d1326b821"
+    },
+    {
+      "name": "diffutils",
+      "version": "3.8",
+      "url": "https://ftp.gnu.org/gnu/diffutils/diffutils-@.tar.xz",
+      "md5": "6a6b0fdc72acfe3f2829aab477876fbc"
+    },
+    {
+      "name": "e2fsprogs",
+      "version": "1.46.4",
+      "url": "https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v@/e2fsprogs-@.tar.gz",
+      "md5": "128f5b0f0746b28d1e3ca7e263c57094"
+    },
+    {
+      "name": "elfutils",
+      "version": "0.185",
+      "url": "https://sourceware.org/ftp/elfutils/@/elfutils-@.tar.bz2",
+      "md5": "2b6e94c2eebc1f2194173e31bca9396e"
+    },
+    {
+      "name": "eudev",
+      "version": "3.2.10",
+      "url": "https://dev.gentoo.org/~blueness/eudev/eudev-@.tar.gz",
+      "md5": "60b135a189523f333cea5f71a3345c8d"
+    },
+    {
+      "name": "expat",
+      "version": "2.4.1",
+      "url": "https://prdownloads.sourceforge.net/expat/expat-@.tar.xz",
+      "md5": "a4fb91a9441bcaec576d4c4a56fa3aa6"
+    },
+    {
+      "name": "expect",
+      "version": "5.45.4",
+      "url": " https://prdownloads.sourceforge.net/expect/expect@.tar.gz",
+      "md5": "00fce8de158422f5ccd2666512329bd2"
+    },
+    {
+      "name": "file",
+      "version": "5.40",
+      "url": "https://astron.com/pub/file/file-@.tar.gz",
+      "md5": "72540ea1cc8c6e1dee35d6100ec66589"
+    },
+    {
+      "name": "findutils",
+      "version": "4.8.0",
+      "url": "https://ftp.gnu.org/gnu/findutils/findutils-@.tar.xz",
+      "md5": "eeefe2e6380931a77dfa6d9350b43186"
+    },
+    {
+      "name": "flex",
+      "version": "2.6.4",
+      "url": "https://github.com/westes/flex/releases/download/v2.6.4/flex-@.tar.gz",
+      "md5": "2882e3179748cc9f9c23ec593d6adc8d"
+    },
+    {
+      "name": "gawk",
+      "version": "5.1.0",
+      "url": "https://ftp.gnu.org/gnu/gawk/gawk-@.tar.xz",
+      "md5": "8470c34eeecc41c1aa0c5d89e630df50"
+    },
+    {
+      "name": "gcc",
+      "version": "11.2.0",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-@.tar.xz",
+      "md5": "31c86f2ced76acac66992eeedce2fce2"
+    },
+    {
+      "name": "gdbm",
+      "version": "1.20",
+      "url": "https://ftp.gnu.org/gnu/gdbm/gdbm-@.tar.gz",
+      "md5": "006c19b8b60828fd6916a16f3496bd3c"
+    },
+    {
+      "name": "gettext",
+      "version": "0.21",
+      "url": "https://ftp.gnu.org/gnu/gettext/gettext-@.tar.xz",
+      "md5": "40996bbaf7d1356d3c22e33a8b255b31"
+    },
+    {
+      "name": "glibc",
+      "version": "2.34",
+      "url": "https://ftp.gnu.org/gnu/glibc/glibc-@.tar.xz",
+      "md5": "31998b53fb39cb946e96abc310af1c89"
+    },
+    {
+      "name": "gmp",
+      "version": "6.2.1",
+      "url": "https://ftp.gnu.org/gnu/gmp/gmp-@.tar.xz",
+      "md5": "0b82665c4a92fd2ade7440c13fcaa42b"
+    },
+    {
+      "name": "gperf",
+      "version": "3.1",
+      "url": "https://ftp.gnu.org/gnu/gperf/gperf-@.tar.gz",
+      "md5": "9e251c0a618ad0824b51117d5d9db87e"
+    },
+    {
+      "namoe": "grep",
+      "version": "3.7",
+      "url": "https://ftp.gnu.org/gnu/grep/grep-@.tar.xz",
+      "md5": "7c9cca97fa18670a21e72638c3e1dabf"
+    },
+    {
+      "name": "groff",
+      "version": "1.22.4",
+      "url": " https://ftp.gnu.org/gnu/groff/groff-@.tar.gz",
+      "md5": "08fb04335e2f5e73f23ea4c3adbf0c5f"
+    },
+    {
+      "name": "grub",
+      "version": "2.06",
+      "url": "https://ftp.gnu.org/gnu/grub/grub-@.tar.xz",
+      "md5": "cf0fd928b1e5479c8108ee52cb114363"
+    },
+    {
+      "name": "gzip",
+      "version": "1.10",
+      "url": "https://ftp.gnu.org/gnu/gzip/gzip-@.tar.xz",
+      "md5": "691b1221694c3394f1c537df4eee39d3"
+    },
+    {
+      "name": "iana-etc",
+      "version": "20210611",
+      "url": "https://github.com/Mic92/iana-etc/releases/download/@/iana-etc-@.tar.gz",
+      "md5": "f2854be57fe281e3ffc7364984467d2f"
+    },
+    {
+      "name": "inetutils",
+      "version": "2.1",
+      "url": "https://ftp.gnu.org/gnu/inetutils/inetutils-@.tar.xz",
+      "md5": "4e7676d1980e57c7df665e5c5c3c1047"
+    },
+    {
+      "name": "intltool",
+      "version": "0.51.0",
+      "url": "https://launchpad.net/intltool/trunk/@/+download/intltool-@.tar.gz",
+      "md5": "12e517cac2b57a0121cda351570f1e63"
+    },
+    {
+      "name": "iproute2",
+      "version": "5.13.0",
+      "url": "https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-@.tar.xz",
+      "md5": "15fc3786303a173a14e180afe4cd2ecd"
+    },
+    {
+      "name": "kbd",
+      "version": "2.4.0",
+      "url": " https://www.kernel.org/pub/linux/utils/kbd/kbd-@.tar.xz",
+      "md5": "3cac5be0096fcf7b32dcbd3c53831380"
+    },
+    {
+      "name": "kmod",
+      "version": "29",
+      "url": "https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-@.tar.xz",
+      "md5": "e81e63acd80697d001c8d85c1acb38a0"
+    },
+    {
+      "name": "less",
+      "version": "590",
+      "url": "https://www.greenwoodsoftware.com/less/less-@.tar.gz",
+      "md5": "f029087448357812fba450091a1172ab"
+    },
+    {
+      "name": "lfs-bootscripts",
+      "version": "20210608",
+      "url": "https://www.linuxfromscratch.org/lfs/downloads/11.0-rc3/lfs-bootscripts-@.tar.xz",
+      "md5": "6efd60044ad31a603a2c31c68919a988"
+    },
+    {
+      "name": "libcap",
+      "version": "2.53",
+      "url": "https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-@.tar.xz",
+      "md5": "094994d4554c6689cf98ae4f717b8e19"
+    },
+    {
+      "name": "libffi",
+      "version": "3.4.2",
+      "url": "https://github.com/libffi/libffi/releases/download/v@/libffi-@.tar.gz",
+      "md5": "294b921e6cf9ab0fbaea4b639f8fdbe8"
+    },
+    {
+      "name": "libpipeline",
+      "version": "1.5.3",
+      "url": "https://download.savannah.gnu.org/releases/libpipeline/libpipeline-@.tar.gz",
+      "md5": "dad443d0911cf9f0f1bd90a334bc9004"
+    },
+    {
+      "name": "libtool",
+      "version": "2.4.6",
+      "url": "https://ftp.gnu.org/gnu/libtool/libtool-@.tar.xz",
+      "md5": "1bfb9b923f2c1339b4d2ce1807064aa5"
+    },
+    {
+      "name": "linux",
+      "version": "5.13.12",
+      "url": " https://www.kernel.org/pub/linux/kernel/v5.x/linux-@.tar.xz",
+      "md5": "6e1728b2021ca19cc9273f080e6c44c7"
+    },
+    {
+      "name": "m4",
+      "version": "1.4.19",
+      "url": "https://ftp.gnu.org/gnu/m4/m4-@.tar.xz",
+      "md5": "0d90823e1426f1da2fd872df0311298d"
+    },
+    {
+      "name": "make",
+      "version": "4.3",
+      "url": "https://ftp.gnu.org/gnu/make/make-@.tar.gz",
+      "md5": "fc7a67ea86ace13195b0bce683fd4469"
+    },
+    {
+      "name": "man-db",
+      "version": "2.9.4",
+      "url": "https://download.savannah.gnu.org/releases/man-db/man-db-@.tar.xz",
+      "md5": "6e233a555f7b9ae91ce7cd0faa322bce"
+    },
+    {
+      "name": "man-pages",
+      "version": "5.12",
+      "url": " https://www.kernel.org/pub/linux/docs/man-pages/man-pages-@.tar.xz",
+      "md5": "192132118f07369c88df267a92f3ef16"
+    },
+    {
+      "name": "menson",
+      "version": "0.59.1",
+      "url": "https://github.com/mesonbuild/meson/releases/download/@/meson-@.tar.gz",
+      "md5": "9c8135ecde820094be2f42f457fb6535"
+    },
+    {
+      "name": "mpc",
+      "version": "1.2.1",
+      "url": "https://ftp.gnu.org/gnu/mpc/mpc-@.tar.gz",
+      "md5": "9f16c976c25bb0f76b50be749cd7a3a8"
+    },
+    {
+      "name": "mpfr",
+      "version": "4.1.0",
+      "url": "https://www.mpfr.org/mpfr-@/mpfr-@.tar.xz",
+      "md5": ""
+    },
+    {
+      "name": "ncurses",
+      "version": "6.2",
+      "url": "https://ftp.gnu.org/gnu/ncurses/ncurses-@.tar.gz",
+      "md5": "e812da327b1c2214ac1aed440ea3ae8d"
+    },
+    {
+      "name": "ninja",
+      "version": "1.10.2",
+      "url": "https://github.com/ninja-build/ninja/archive/v@/ninja-@.tar.gz",
+      "md5": "639f75bc2e3b19ab893eaf2c810d4eb4"
+    },
+    {
+      "name": "openssl",
+      "version": "1.1.1",
+      "url": "https://www.openssl.org/source/openssl-@l.tar.gz",
+      "md5": "ac0d4387f3ba0ad741b0580dd45f6ff3"
+    },
+    {
+      "name": "patch",
+      "version": "2.7.6",
+      "url": "https://ftp.gnu.org/gnu/patch/patch-@.tar.xz",
+      "md5": "78ad9937e4caadcba1526ef1853730d5"
+    },
+    {
+      "name": "perl",
+      "version": "5.34.0",
+      "url": "https://www.cpan.org/src/5.0/perl-@.tar.xz",
+      "md5": "df7ecb0653440b26dc951ad9dbfab517"
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.29.2",
+      "url": " https://pkg-config.freedesktop.org/releases/pkg-config-@.tar.gz",
+      "md5": "f6e931e319531b736fadc017f470e68a"
+    },
+    {
+      "name": "procps",
+      "version": "3.3.17",
+      "url": "https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-@.tar.xz",
+      "md5": "d60613e88c2f442ebd462b5a75313d56"
+    },
+    {
+      "name": "psmisc",
+      "version": "23.4",
+      "url": "https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-@.tar.xz",
+      "md5": "8114cd4489b95308efe2509c3a406bbf"
+    },
+    {
+      "name": "python",
+      "version": "3.9.6",
+      "url": "https://www.python.org/ftp/python/@/Python-@.tar.xz",
+      "md5": "ecc29a7688f86e550d29dba2ee66cf80"
+    },
+    {
+      "name": "python documentation",
+      "version": "3.9.6",
+      "url": "https://www.python.org/ftp/python/doc/@/python-@-docs-html.tar.bz2",
+      "md5": "0dae29e4c38af1b6b1a86b35c9e48923"
+    },
+    {
+      "name": "readline",
+      "version": "8.1",
+      "url": "https://ftp.gnu.org/gnu/readline/readline-@.tar.gz",
+      "md5": "e9557dd5b1409f5d7b37ef717c64518e"
+    },
+    {
+      "name": "sed",
+      "version": "4.8",
+      "url": "https://ftp.gnu.org/gnu/sed/sed-@.tar.xz",
+      "md5": "6d906edfdb3202304059233f51f9a71d"
+    },
+    {
+      "name": "shadow",
+      "version": "4.9",
+      "url": "https://github.com/shadow-maint/shadow/releases/download/v@/shadow-@.tar.xz",
+      "md5": "126924090caf72f3de7e9261fd4e10ac"
+    },
+    {
+      "name": "sysklogd",
+      "version": "1.5.1",
+      "url": "https://www.infodrom.org/projects/sysklogd/download/sysklogd-@.tar.gz",
+      "md5": "c70599ab0d037fde724f7210c2c8d7f8"
+    },
+    {
+      "name": "sysvinit",
+      "version": "2.99",
+      "url": "https://download.savannah.gnu.org/releases/sysvinit/sysvinit-@.tar.xz",
+      "md5": "6abc0ea61b8dd4a41b4e931a43b1bb90"
+    },
+    {
+      "name": "tar",
+      "version": "1.34",
+      "url": "https://ftp.gnu.org/gnu/tar/tar-@.tar.xz",
+      "md5": "9a08d29a9ac4727130b5708347c0f5cf"
+    },
+    {
+      "name": "tcl",
+      "version": "8.6.11",
+      "url": "https://downloads.sourceforge.net/tcl/tcl@-src.tar.gz",
+      "md5": "8a4c004f48984a03a7747e9ba06e4da4"
+    },
+    {
+      "name": "tcl documentation",
+      "version": "8.6.11",
+      "url": "https://downloads.sourceforge.net/tcl/tcl@-html.tar.gz",
+      "md5": "e358a9140c3a171e42f18c8a7f6a36ea"
+    },
+    {
+      "name": "texinfo",
+      "version": "6.8",
+      "url": "https://ftp.gnu.org/gnu/texinfo/texinfo-@.tar.xz",
+      "md5": "a91b404e30561a5df803e6eb3a53be71"
+    },
+    {
+      "name": "time zone data",
+      "version": "2021a",
+      "url": "https://www.iana.org/time-zones/repository/releases/tzdata@.tar.gz",
+      "md5": "20eae7d1da671c6eac56339c8df85bbd"
+    },
+    {
+      "name": "udev-lfs tarball",
+      "version": "udev-lfs-20171102",
+      "url": "https://anduin.linuxfromscratch.org/LFS/@.tar.xz",
+      "md5": "27cd82f9a61422e186b9d6759ddf1634"
+    },
+    {
+      "name": "util-linux",
+      "version": "2.37.2",
+      "url": "https://www.kernel.org/pub/linux/utils/util-linux/v2.37/util-linux-@.tar.xz",
+      "md5": "d659bf7cd417d93dc609872f6334b019"
+    },
+    {
+      "name": "vim",
+      "version": "8.2.3337",
+      "url": " https://anduin.linuxfromscratch.org/LFS/vim-@.tar.gz",
+      "md5": "e0325a4988b1b99b9c2e46fa853c1980"
+    },
+    {
+      "name": "xml::parser",
+      "version": "2.46",
+      "url": " https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-@.tar.gz",
+      "md5": "80bb18a8e6240fcf7ec2f7b57601c170"
+    },
+    {
+      "name": "xz utils",
+      "version": "5.2.5",
+      "url": "https://tukaani.org/xz/xz-@.tar.xz",
+      "md5": "aa1621ec7013a19abab52a8aff04fe5b"
+    },
+    {
+      "name": "zlib",
+      "version": "1.2.11",
+      "url": "https://zlib.net/zlib-@.tar.xz",
+      "md5": "85adef240c5f370b308da8c938951a68"
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.0",
+      "url": " https://github.com/facebook/zstd/releases/download/v@/zstd-@.tar.gz",
+      "md5": "a6eb7fb1f2c21fa80030a47993853e92"
+    }
+  ]
+}
