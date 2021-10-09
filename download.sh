@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-for i in {0..78} 
+for i in {0..85} 
 do 
   NAME=`jq -r ".package[$i].name" packages.json`
   VERSION=` jq -r ".package[$i].version" packages.json`
@@ -22,3 +22,5 @@ do
   fi
 
 done
+
+

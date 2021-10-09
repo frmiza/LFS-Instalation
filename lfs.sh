@@ -4,7 +4,7 @@ sudo mkdir -pv /mnt/lfs
 
 export LFS=/mnt/lfs
 export LFS_TGT=x86_64-lfs-linux-gnu
-export LFS_DISK=/dev/sdc
+export LFS_DISK=/dev/sdb
 
 if ! grep -q "$LFS" /proc/mounts; then
   source setupdisk.sh "$LFS_DISK" # if LFS is not mount yet 
@@ -23,8 +23,16 @@ case $(uname -m) in # check if we are compiling to a x86_64 machine
   x86_64) mkdir -pv $LFS/lib64 ;;
 esac
 
-cp -rf *.sh packages.json "$LFS/sources"
+## DONWLOAD SECTION
+cp -rf *.sh packages.json charpter* "$LFS/sources"
 cd "$LFS/sources"
 export PATH="$LFS/tools/bin:$PATH"
 
 source download.sh
+
+
+## COMPILE SECTION
+#binutils gcc linux 
+for package in glibc; do
+  source packageinstall.sh 5 $package
+done

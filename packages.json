@@ -1,5 +1,5 @@
 {
-  "amount":78,
+  "amount":85,
   "package":[
     {
       "name": "acl",
@@ -474,6 +474,48 @@
       "version": "1.5.0",
       "url": "https://github.com/facebook/zstd/releases/download/v@/zstd-@.tar.gz",
       "md5": "a6eb7fb1f2c21fa80030a47993853e92"
+    },
+    {
+      "name": "binutils upstream fix patch",
+      "version": "2.37",
+      "url": "https://www.linuxfromscratch.org/patches/lfs/11.0-rc3/binutils-@-upstream_fix-1.patch",
+      "md5": "3518fa864fe8d7ef65be4960f380b03b"
+    },
+    {
+      "name": "bzip2 documentation patch",
+      "version": "1.0.8",
+      "url": "https://www.linuxfromscratch.org/patches/lfs/11.0-rc3/bzip2-@-install_docs-1.patch",
+      "md5": "6a5ac7e89b791aae556de0f745916f7f"
+    },
+    {
+      "name": "coreutils internationalization fixes patch",
+      "version": "8.32",
+      "url": "https://www.linuxfromscratch.org/patches/lfs/11.0-rc3/coreutils-@-i18n-1.patch",
+      "md5": "cd8ebed2a67fff2e231026df91af6776"
+    },
+    {
+      "name": "glibc fhs patch",
+      "version": "2.34",
+      "url": "https://www.linuxfromscratch.org/patches/lfs/11.0-rc3/glibc-@-fhs-1.patch",
+      "md5": "9a5997c3452909b1769918c759eff8a2"
+    },
+    {
+      "name": "kbd backspace/delete fix patch",
+      "version": "2.4.0",
+      "url": "https://www.linuxfromscratch.org/patches/lfs/11.0-rc3/kbd-@-backspace-1.patch",
+      "md5": "f75cca16a38da6caa7d52151f7136895"
+    },
+    {
+      "name": "perl upstream fix patch",
+      "version": "5.34.0",
+      "url": "https://www.linuxfromscratch.org/patches/lfs/11.0-rc3/perl-@-upstream_fixes-1.patch",
+      "md5": "fb42558b59ed95ee00eb9f1c1c9b8056"
+    },
+    {
+      "name": "sysvinit consolidated patch",
+      "version": "2.99",
+      "url": "https://www.linuxfromscratch.org/patches/lfs/11.0-rc3/sysvinit-@-consolidated-1.patch",
+      "md5": "4900322141d493e74020c9cf437b2cdc"
     }
   ]
 }
