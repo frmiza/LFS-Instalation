@@ -1,7 +1,14 @@
 #!/bin/bash
-
+echo "Dist root: ${DIST_ROOT}"
+echo "LFS: ${LFS:?}"
 CHARPTER=$1
 PACKAGE=$2
+
+if ! test $(whoami) = distbuild; then
+  echo "Must run as distbuild"
+  exit 1
+fi
+
 
 PACKAGE_INFOS=($(cat ./packages.json | jq -r ".package[] | select(.name| test(\"$PACKAGE$\")?) | .version, .url"))
 
