@@ -2,12 +2,6 @@
 echo "Dist root: ${DIST_ROOT}"
 echo "LFS: ${LFS:?}"
 
-#if ! grep -q "$LFS" /proc/mounts; then
-#  source setupdisk.sh "$LFS_DISK" # if LFS is not mount yet 
-#  sudo mount "${LFS_DISK}2" "$LFS" 
-#  sudo chown -v $USER "$LFS" # in the LFS book they create a few directories and chenge the owner for each one, chenge the owner of the whole mount point to $USER will work, and we dont need use "sudo" to create directories and files anymore
-#fi
-
 # intermediate cross compiling
 mkdir -pv $LFS/sources # download tarballs here 
 chmod -v a+wt $LFS/sources
@@ -23,7 +17,6 @@ esac
 ## DONWLOAD SECTION
 cp -rf *.sh packages.json charpter* "$LFS/sources"
 cd "$LFS/sources"
-#export PATH="$LFS/tools/bin:$PATH"
 
 source download.sh
 
@@ -48,7 +41,7 @@ EOF
     set +h
     umask 022
     LFS=$LFS
-    DIST_ROOT=$DIST_ROOT
+    export DIST_ROOT=$DIST_ROOT
 EOF
 
   cat >> $dbhome/.bashrc << EOF
@@ -64,10 +57,8 @@ EOF
 
   fi
   
-
-
 ## COMPILE SECTION
 #binutils gcc linux 
-#for package in glibc; do
-#  source packageinstall.sh 5 $package
-#done
+for package in binutils gcc linux glibc libstc++; do
+  source packageinstall.sh 5 $package
+done

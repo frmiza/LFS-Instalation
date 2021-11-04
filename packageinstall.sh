@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 echo "Dist root: ${DIST_ROOT}"
 echo "LFS: ${LFS:?}"
 CHARPTER=$1
@@ -41,3 +43,5 @@ PACKAGE_INFOS=($(cat ./packages.json | jq -r ".package[] | select(.name| test(\"
   
   echo "$PACKAGE Done"
   popd
+  
+  rm -rf $PACKAGE

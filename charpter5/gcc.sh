@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 mkdir mpfr gmp mpc
 tar xvf ../mpfr-*.tar.xz -C ./mpfr  --strip-component=1
