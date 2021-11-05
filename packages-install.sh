@@ -6,11 +6,12 @@ echo "LFS: ${LFS:?}"
 CHARPTER=$1
 PACKAGE=$2
 
-if ! test $(whoami) == distbuild; then
-  echo "Must run as distbuild"
-  exit 1
-fi
+#if ! test $(whoami) == distbuild; then
+#  echo "Must run as distbuild"
+#  exit -1
+#fi
 
+cd $LFS/sources
 
 PACKAGE_INFOS=($(cat ./packages.json | jq -r ".package[] | select(.name| test(\"$PACKAGE$\")?) | .version, .url"))
 
@@ -19,7 +20,7 @@ PACKAGE_INFOS=($(cat ./packages.json | jq -r ".package[] | select(.name| test(\"
   CACHEFILE="$(basename "$URL")"
   DIRNAME="$(echo "$CACHEFILE" | sed 's/\(.*\)\.tar\..*/\1/')"
 
-  mkdir -pv $DIRNAME
+  mkdir $DIRNAME
 
   echo "Extracting $CACHEFILE ..."
   tar -xf $CACHEFILE -C $DIRNAME
@@ -44,4 +45,3 @@ PACKAGE_INFOS=($(cat ./packages.json | jq -r ".package[] | select(.name| test(\"
   echo "$PACKAGE Done"
   popd
   
-  rm -rf $PACKAGE

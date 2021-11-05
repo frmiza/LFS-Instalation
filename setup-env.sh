@@ -14,11 +14,15 @@ case $(uname -m) in # check if we are compiling to a x86_64 machine
   x86_64) mkdir -pv $LFS/lib64 ;;
 esac
 
+for i in bin lib sbin; do
+  ln -sv usr/$i $LFS/$i
+done
+
 ## DONWLOAD SECTION
-cp -rf *.sh packages.json charpter* "$LFS/sources"
+sudo cp -rf *.sh packages.json charpter* "$LFS/sources"
 cd "$LFS/sources"
 
-source download.sh
+source packages-download.sh
 
 if ! test $(id -u distbuild); then
 
@@ -26,7 +30,7 @@ if ! test $(id -u distbuild); then
   useradd -s /bin/bash -g distbuild -m -k /dev/null distbuild
   passwd distbuild
   
-  chown -v distbuild $LFS/{boot,etc,bin,lib,sbin,usr,var,tools,sources/*}
+  chown -v distbuild $LFS/{boot,etc,bin,lib,sbin,usr,var,tools,sources,sources/*}
   case $(uname -m) in # check if we are compiling to a x86_64 machine
     x86_64) chown -v distbuild $LFS/lib64 ;;
   esac
@@ -56,9 +60,3 @@ EOF
 EOF
 
   fi
-  
-## COMPILE SECTION
-#binutils gcc linux 
-#for package in binutils gcc linux glibc libstc++; do
-#  source packageinstall.sh 5 $package
-#done

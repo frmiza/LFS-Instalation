@@ -3,7 +3,7 @@
 sudo pacman -S bash \
   binutils \
   bison \
-  bzip \
+  bzip2 \
   coreutils \
   diffutils \
   findutils\
@@ -19,4 +19,5 @@ sudo pacman -S bash \
   sed \
   tar \
   xz \
-  texinfo
+  texinfo \
+  jq
