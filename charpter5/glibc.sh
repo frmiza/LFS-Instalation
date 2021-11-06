@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
+cd $LFS/sources
+tar -xf glibc-*.tar.xz
+cd glibc-*/
 
 case $(uname -m) in
     i?86)   ln -sfv ld-linux.so.2 $LFS/lib/ld-lsb.so.3
@@ -9,7 +12,7 @@ case $(uname -m) in
     ;;
 esac
 
-patch -Np1 -i ../glibc-$VERSION-fhs-1.patch
+patch -Np1 -i ../glibc-*-fhs-1.patch
 
 mkdir -pv build
 cd build
@@ -22,13 +25,20 @@ echo "rootsbindir=/usr/sbin" > configparms
       --build=$(../scripts/config.guess) \
       --enable-kernel=3.2                \
       --with-headers=$LFS/usr/include    \
-      libc_cv_slibdir=/usr/lib 		 \
-make \
-&& make DESTDIR=$LFS install -j4
+      libc_cv_slibdir=/usr/lib 		 
+
+make
+make DESTDIR=$LFS install
 
 echo 'int main(){}' > dummy.c
-$LFS_TGT-gcc dummy.c || exit 1
-readelf -l a.out | grep '/ld-linux' || exit 1
+$LFS_TGT-gcc dummy.c
+readelf -l a.out | grep '/ld-linux'
+
+sleep 5
+
 rm -v dummy.c a.out
 
 $LFS/tools/libexec/gcc/$LFS_TGT/11.2.0/install-tools/mkheaders
+
+cd $LFS/sources
+rm -rf glibc-*/

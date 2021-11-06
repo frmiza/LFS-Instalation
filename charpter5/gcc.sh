@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
+cd $LFS/sources
+tar -xf gcc-*.tar.xz
+cd gcc-*/
 
 mkdir mpfr gmp mpc
 tar xvf ../mpfr-*.tar.xz -C ./mpfr  --strip-component=1
@@ -35,12 +38,13 @@ cd build
   --disable-libssp            \
   --disable-libvtv            \
   --disable-libstdcxx         \
-  --enable-languages=c,c++    \
+  --enable-languages=c,c++    
 
-make \
-&& sudo make install
+make && make install
 
 cd ..
 
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/install-tools/include/limits.h
+cd $LFS/sources
+rm -rf gcc-*/

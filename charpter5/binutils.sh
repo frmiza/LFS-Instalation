@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e 
+cd $LFS/sources
+tar -xf binutils-*.tar.xz
+cd binutils-*/
 
 mkdir -pv build
 cd build
@@ -8,7 +11,9 @@ cd build
   --with-sysroot=$LFS \
   --target=$LFS_TGT   \
   --disable-nls       \
-  --disable-werror    \
+  --disable-werror    
 
-make \
-&& sudo make install -j1
+make && make install 
+
+cd $LFS/sources
+rm -rf binutils-*/ 
