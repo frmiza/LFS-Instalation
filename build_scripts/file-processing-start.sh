@@ -1,4 +1,4 @@
-FILE=$1
+FILE=$(echo $1 | sed 's/\..*//')
 
 echo 
 echo "Processing $FILE"
@@ -6,7 +6,8 @@ echo
 sleep 1
 
 cd $LFS/sources
-tar -xf $FILE
-DIR=$(echo $FILE | sed 's/\(.*\).tar\..*/\1/')
-cd $DIR
+TARBALL=$(ls $FILE-*.tar.xz)
+tar -xf $TARBALL
 
+DIR=$(echo $TARBALL | sed 's/\(.*\).tar\..*/\1/')
+cd $DIR

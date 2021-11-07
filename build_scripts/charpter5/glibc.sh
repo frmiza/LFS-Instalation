@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $1
+source ../file-processing-start.sh $0
 
 case $(uname -m) in
     i?86)   ln -sfv ld-linux.so.2 $LFS/lib/ld-lsb.so.3
@@ -36,4 +36,4 @@ rm -v dummy.c a.out
 
 $LFS/tools/libexec/gcc/$LFS_TGT/11.2.0/install-tools/mkheaders
 
-source ../file-cleanup.sh $1
+source ../file-cleanup.sh $0

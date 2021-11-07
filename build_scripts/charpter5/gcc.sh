@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $1
+source ../file-processing-start.sh $0
 
 mkdir mpfr gmp mpc
 tar xvf ../mpfr-*.tar.xz -C ./mpfr  --strip-component=1
@@ -43,4 +43,4 @@ cd ..
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/install-tools/include/limits.h
 
-source ../file-cleanup.sh $1
+source ../file-cleanup.sh $0

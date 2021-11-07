@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $1
+source ../file-processing-start.sh $0
 
 mkdir -v build
 cd build
@@ -17,4 +17,4 @@ make
 make DESTDIR=$LFS install -j1
 install -vm755 libctf/.libs/libctf.so.0.0.0 $LFS/usr/lib
 
-source ../file-cleanup.sh $1
+source ../file-cleanup.sh $0
