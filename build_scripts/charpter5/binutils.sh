@@ -1,8 +1,4 @@
-#!/bin/bash
-set -e 
-cd $LFS/sources
-tar -xf binutils-*.tar.xz
-cd binutils-*/
+source ../file-processing-start.sh $1
 
 mkdir -pv build
 cd build
@@ -15,5 +11,4 @@ cd build
 
 make && make install 
 
-cd $LFS/sources
-rm -rf binutils-*/ 
+source ../file-cleanup.sh $1

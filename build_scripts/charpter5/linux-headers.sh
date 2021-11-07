@@ -1,8 +1,4 @@
-#!/bin/bash
-set -e
-cd $LFS/sources
-tar -xf linux-*.tar.xz
-cd linux-*/
+source ../file-processing-start.sh $1
 
 make mrproper
 
@@ -11,5 +7,4 @@ find usr/include -name '.*' -delete
 rm usr/include/Makefile
 cp -rv usr/include $LFS/usr
 
-cd $LFS/sources
-rm -rf linux-*/
+source ../file-cleanup.sh $1

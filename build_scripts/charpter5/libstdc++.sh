@@ -1,8 +1,6 @@
-#!/bin/bash
-set -e
-cd $LFS/sources
-tar -xf gcc-*.tar.xz
-cd gcc-*/
+source ../file-processing-start.sh $1
+
+VERSION=$(echo $1 | sed 's/.*-\(.*\).tar\..*/\1/')
 
 mkdir -pv build
 cd build
@@ -14,8 +12,8 @@ cd build
     --disable-multilib              \
     --disable-nls                   \
     --disable-libstdcxx-pch         \
-    --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/11.2.0
+    --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/$VERSION
 
 make && make install
-cd $LFS/sources
-rm -rf gcc-*/
+
+source ../file-cleanup.sh $1

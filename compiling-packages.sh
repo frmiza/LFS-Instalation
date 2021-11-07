@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "LFS: ${LFS:?}"
 
 if ! test $(whoami) == "distbuild" ; then
 	echo "must run as distbuild"
