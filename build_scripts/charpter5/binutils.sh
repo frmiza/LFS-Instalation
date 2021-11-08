@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $0
+source build_scripts/file-processing-start.sh $(basename $0)
 
 mkdir -pv build
 cd build
@@ -11,4 +11,4 @@ cd build
 
 make && make install 
 
-source ../file-cleanup.sh $0
+source build_scripts/file-cleanup.sh $(basename $0)

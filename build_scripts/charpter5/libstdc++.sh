@@ -1,4 +1,4 @@
-source ../file-processing-start.sh gcc
+source build_scripts/file-processing-start.sh gcc
 
 VERSION=$(ls $LFS/sources/gcc-*.tar.xz | sed 's/.*-\(.*\).tar\..*/\1/')
 
@@ -16,4 +16,4 @@ cd build
 
 make && make install
 
-source ../file-cleanup.sh gcc
+source build_scripts/file-cleanup.sh gcc

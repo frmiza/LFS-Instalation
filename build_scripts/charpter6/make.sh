@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $0
+source ../file-processing-start.sh $(basename $0)
 
 ./configure --prefix=/usr   \
             --without-guile \
@@ -9,4 +9,4 @@ make
 
 make DESTDIR=$LFS install
 
-source ../file-cleanup.sh $0
+source ../file-cleanup.sh $(basename $0)
