@@ -1,4 +1,4 @@
-source ../file-processing-start.sh gcc
+source build_scripts/file-processing-start.sh gcc
 
 VERSION=$(ls $LFS/sources/gcc-*.tar.xz | sed 's/.*-\(.*\).tar\..*/\1/')
 
@@ -14,6 +14,7 @@ cd build
     --disable-libstdcxx-pch         \
     --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/$VERSION
 
-make && make install
+make
+make DESTDIR=$LFS install
 
-source ../file-cleanup.sh gcc
+source build_scripts/file-cleanup.sh gcc

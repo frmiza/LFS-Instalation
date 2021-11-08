@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $0
+source build_scripts/file-processing-start.sh $(basename $0)
 
 
 mkdir mpfr gmp mpc
@@ -42,4 +42,4 @@ make DESTDIR=$LFS install
 
 ln -sv gcc $LFS/usr/bin/cc
 
-source ../file-cleanup.sh $0
+source build_scripts/file-cleanup.sh $(basename $0)

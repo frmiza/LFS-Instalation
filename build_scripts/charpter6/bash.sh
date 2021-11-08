@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $0
+source build_scripts/file-processing-start.sh $(basename $0)
 
 ./configure --prefix=/usr                   \
             --build=$(support/config.guess) \
@@ -10,4 +10,4 @@ make DESTDIR=$LFS install
 
 ln -sv bash $LFS/bin/sh
 
-source ../file-cleanup.sh $0
+source build_scripts/file-cleanup.sh $(basename $0)

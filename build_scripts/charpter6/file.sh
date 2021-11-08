@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $0
+source build_scripts/file-processing-start.sh $(basename $0)
 
 mkdir build
 pushd build
@@ -15,4 +15,4 @@ make FILE_COMPILE=$(pwd)/build/src/file
 
 make DESTDIR=$LFS install
 
-source ../file-cleanup.sh $0
+source build_scripts/file-cleanup.sh $(basename $0) 

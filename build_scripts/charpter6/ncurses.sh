@@ -1,4 +1,4 @@
-source ../file-processing-start.sh $0
+source build_scripts/file-processing-start.sh $(basename $0)
 
 sed -i s/mawk// configure
 
@@ -25,4 +25,4 @@ make
 make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install
 echo "INPUT(-lncursesw)" > $LFS/usr/lib/libncurses.so
 
-source ../file-cleanup.sh $0
+source build_scripts/file-cleanup.sh $(basename $0)

@@ -40,7 +40,7 @@ cat > $dbhome/.bash_profile << "EOF"
 exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
 EOF
 
-cat > ~/.bashrc << "EOF"
+cat > $dbhome/.bashrc << "EOF"
 set +h
 umask 022
 LFS=/mnt/lfs
