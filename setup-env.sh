@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "LFS: ${LFS:?}"
+echo "DIST_ROOT: ${DIST_ROOT:?}"
 
 # intermediate cross compiling
 mkdir -pv $LFS/sources # download tarballs here 
@@ -18,7 +19,7 @@ esac
 
 
 ## DONWLOAD SECTION
-sudo cp -rf *.sh packages.json charpter* "$LFS/sources"
+sudo cp -rf ../LFS-instalation "$DIST_ROOT"
 cd "$LFS/sources"
 
 source packages-download.sh
@@ -40,10 +41,14 @@ cat > $dbhome/.bash_profile << "EOF"
 exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
 EOF
 
-cat > $dbhome/.bashrc << "EOF"
+cat > $dbhome/.bashrc << EOF
 set +h
 umask 022
-LFS=/mnt/lfs
+LFS=$(echo $LFS)
+export DIST_ROOT=$(echo $DIST_ROOT)
+EOF
+
+cat > $dbhome/.bashrc << "EOF"
 LC_ALL=POSIX
 LFS_TGT=$(uname -m)-lfs-linux-gnu
 PATH=/usr/bin
@@ -53,4 +58,5 @@ CONFIG_SITE=$LFS/usr/share/config.site
 export LFS LC_ALL LFS_TGT PATH CONFIG_SITE
 MAKEFLAGS="-j4"
 EOF
+
 fi

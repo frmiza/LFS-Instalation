@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-source build_scripts/file-processing-start.sh $(basename $0)
-=======
-source ../file-processing-start.sh $(basename $0)
->>>>>>> a181d103409fe8556bb43d2b0efe53a8a29f6cea
-
+source $DIST_ROOT/LFS-instalation/build_scripts/file-processing-start.sh $(basename $0)
 
 mkdir mpfr gmp mpc
 tar xvf ../mpfr-*.tar.xz -C ./mpfr  --strip-component=1
@@ -46,8 +41,4 @@ make DESTDIR=$LFS install
 
 ln -sv gcc $LFS/usr/bin/cc
 
-<<<<<<< HEAD
-source build_scripts/file-cleanup.sh $(basename $0)
-=======
-source ../file-cleanup.sh $(basename $0)
->>>>>>> a181d103409fe8556bb43d2b0efe53a8a29f6cea
+source $DIST_ROOT/LFS-instalation/build_scripts/file-cleanup.sh $(basename $0)

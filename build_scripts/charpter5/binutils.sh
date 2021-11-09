@@ -1,4 +1,4 @@
-source build_scripts/file-processing-start.sh $(basename $0)
+source $DIST_ROOT/LFS-instalation/build_scripts/file-processing-start.sh $(basename $0)
 
 mkdir -pv build
 cd build
@@ -11,4 +11,4 @@ cd build
 
 make && make install 
 
-source build_scripts/file-cleanup.sh $(basename $0)
+source $DIST_ROOT/LFS-instalation/build_scripts/file-cleanup.sh $(basename $0)

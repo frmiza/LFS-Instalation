@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-source build_scripts/file-processing-start.sh $(basename $0)
-=======
-source ../file-processing-start.sh $(basename $0)
->>>>>>> a181d103409fe8556bb43d2b0efe53a8a29f6cea
+source $DIST_ROOT/LFS-instalation/build_scripts/file-processing-start.sh $(basename $0)
 
 sed -i s/mawk// configure
 
@@ -29,8 +25,4 @@ make
 make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install
 echo "INPUT(-lncursesw)" > $LFS/usr/lib/libncurses.so
 
-<<<<<<< HEAD
-source build_scripts/file-cleanup.sh $(basename $0)
-=======
-source ../file-cleanup.sh $(basename $0)
->>>>>>> a181d103409fe8556bb43d2b0efe53a8a29f6cea
+source $DIST_ROOT/LFS-instalation/build_scripts/file-cleanup.sh $(basename $0)
