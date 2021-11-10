@@ -35,4 +35,12 @@ chgrp -v utmp /var/log/lastlog
 chmod -v 664  /var/log/lastlog
 chmod -v 600  /var/log/btmp
 
+cd /dist/LFS-instalation
+
+echo "Start compiling packages belongs to charpter 7"
+
+for package in libstdc++ gettext bison perl Python texinfo util-linux; do
+  bash -e dist/LFS-instalation/build_scripts/charpter7/${package}.sh | tee /sources/log/charpter7/${package}.log
+done
+
 echo "Finish Chroot"

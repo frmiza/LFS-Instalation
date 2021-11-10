@@ -19,3 +19,7 @@ mkdir -pv $LFS/sources/log/charpter6
 for package in m4 ncurses bash coreutils diffutils file findutils gawk grep gzip make patch sed tar xz binutils gcc ; do
   bash -e build_scripts/charpter6/${package}.sh | tee $LFS/sources/log/charpter6/${package}.log
 done
+
+## CHARPTER 7
+
+sudo -E ./build_scripts/charpter7/pre-chroot.sh
