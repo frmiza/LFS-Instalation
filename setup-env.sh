@@ -9,9 +9,11 @@ chmod -v a+wt $LFS/sources
 # basic linux structure
 mkdir -pv $LFS/{boot,etc,var,usr/{bin,lib,sbin},tools}
 
-for i in bin lib sbin; do
-  ln -sv usr/$i $LFS/$i
-done
+if ! test -c $LFS/bin; then
+  ln -sv usr/bin $LFS/bin
+  ln -sv usr/lib $LFS/lib
+  ln -sv usr/sbin $LFS/sbin
+fi
 
 case $(uname -m) in # check if we are compiling to a x86_64 machine
   x86_64) mkdir -pv $LFS/lib64 ;;
