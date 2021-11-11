@@ -12,7 +12,7 @@ do
   if [ ! -f "$CACHEFILE" ]; then
 
     echo "Downloading $URL"
-    wget "$URL"
+    wget "$URL" -P $LFS/sources/
     if ! echo $MD5 $CACHEFILE | md5sum -c > /dev/null; then
       rm -f $CACHEFILE
       echo "faliled!! MD5sun of $CACHEFILE mismatch"

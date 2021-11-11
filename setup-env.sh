@@ -2,6 +2,8 @@
 echo "LFS: ${LFS:?}"
 echo "DIST_ROOT: ${DIST_ROOT:?}"
 
+chmod 755 $LFS
+
 # intermediate cross compiling
 mkdir -pv $LFS/sources # download tarballs here 
 chmod -v a+wt $LFS/sources
@@ -9,11 +11,9 @@ chmod -v a+wt $LFS/sources
 # basic linux structure
 mkdir -pv $LFS/{boot,etc,var,usr/{bin,lib,sbin},tools}
 
-if ! test -c $LFS/bin; then
-  ln -sv usr/bin $LFS/bin
-  ln -sv usr/lib $LFS/lib
-  ln -sv usr/sbin $LFS/sbin
-fi
+ln -sv usr/bin $LFS/bin
+ln -sv usr/lib $LFS/lib
+ln -sv usr/sbin $LFS/sbin
 
 case $(uname -m) in # check if we are compiling to a x86_64 machine
   x86_64) mkdir -pv $LFS/lib64 ;;
@@ -21,8 +21,8 @@ esac
 
 
 ## DONWLOAD SECTION
-sudo cp -rf ../LFS-instalation "$DIST_ROOT"
-cd "$LFS/sources"
+
+sudo cp -rf ../LFS-instalation $DIST_ROOT
 
 source packages-download.sh
 

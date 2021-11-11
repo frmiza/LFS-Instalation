@@ -1,3 +1,7 @@
+#!/bin/bash
+echo "Mounting ${LFS:?}"
+echo "Binding ${DIST_ROOT:?}"
+
 set -e
 echo "Preparing Chroot ${LFS:?}"
 echo ""
@@ -8,52 +12,27 @@ case $(uname -m) in
   x86_64) chown -R root:root $LFS/lib64 ;;
 esac
 
-mkdir -pv $LFS/{dev,proc,sys,run}
+mkdir -pv $LFS/{dev,proc,sys,run,dist}
 
 if ! test -c $LFS/dev/console; then
   mknod -m 600 $LFS/dev/console c 5 1
   mknod -m 666 $LFS/dev/null c 1 3
 fi
 
-bash -e $DIST_ROOT/LFS-instalation/build_scripts/mount-vfs.sh
+# Mount points
+mount -v --bind /dev $LFS/dev
+mount -v --bind /dev/pts $LFS/dev/pts
+mount -vt proc proc $LFS/proc
+mount -vt sysfs sysfs $LFS/sys
+mount -vt tmpfs tmpfs $LFS/run
 
-cat > $LFS/etc/passwd << "EOF"
-root:x:0:0:root:/root:/bin/bash
-bin:x:1:1:bin:/dev/null:/bin/false
-daemon:x:6:6:Daemon User:/dev/null:/bin/false
-messagebus:x:18:18:D-Bus Message Daemon User:/run/dbus:/bin/false
-uuidd:x:80:80:UUID Generation Daemon User:/dev/null:/bin/false
-nobody:x:99:99:Unprivileged User:/dev/null:/bin/false
-EOF
+if [ -h $LFS/dev/shm ]; then
+  mkdir -pv $LFS/$(readlink $LFS/dev/shm)
+fi
 
-cat > $LFS/etc/group << "EOF"
-root:x:0:
-bin:x:1:daemon
-sys:x:2:
-kmem:x:3:
-tape:x:4:
-tty:x:5:
-daemon:x:6:
-floppy:x:7:
-disk:x:8:
-lp:x:9:
-dialout:x:10:
-audio:x:11:
-video:x:12:
-utmp:x:13:
-usb:x:14:
-cdrom:x:15:
-adm:x:16:
-messagebus:x:18:
-input:x:24:
-mail:x:34:
-kvm:x:61:
-uuidd:x:80:
-wheel:x:97:
-nogroup:x:99:
-users:x:999:
-EOF
+mount -v --bind $DIST_ROOT/ $LFS/dist 
 
+# ENTER THE CHROOT
 chroot "$LFS" /usr/bin/env -i   \
     HOME=/root                  \
     TERM="$TERM"                \
@@ -62,7 +41,15 @@ chroot "$LFS" /usr/bin/env -i   \
     MAKEFLAGS='-j4'             \
     CFLAGS='-O2 -march=native -pipe'   \
     CXXFLAGS='-O2 -march=native -pipe' \
-    /dist/LFS-instalation/build_scripts/charpter7/finish-chroot.sh
+    /bin/bash --login +h -c "/dist/LFS-instalation/build_scripts/charpter7/finish-chroot.sh"
 
 
-bash -e $DIST_ROOT/LFS-instalation/build_scripts/umount-vfs.sh
+echo "Unmounting ${LFS:?}"
+echo "UnBinding ${DIST_ROOT:?}"
+
+umount -v $LFS/dist 
+umount -v $LFS/run
+umount -v $LFS/sys
+umount -v $LFS/proc
+umount -v $LFS/dev/pts
+umount -v $LFS/dev
