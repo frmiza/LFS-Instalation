@@ -1,4 +1,4 @@
-source $DIST_ROOT/LFS-instalation/build_scripts/file-processing-start.sh $(basename $0)
+source /dist/LFS-instalation/build_scripts/file-processing-start.sh $(basename $0)
 
 mkdir -pv /var/lib/hwclock
 
@@ -18,4 +18,4 @@ mkdir -pv /var/lib/hwclock
 
 make && make install
 
-source $DIST_ROOT/LFS-instalation/build_scripts/file-cleanup.sh $(basename $0)
+source /dist/LFS-instalation/build_scripts/file-cleanup.sh $(basename $0)

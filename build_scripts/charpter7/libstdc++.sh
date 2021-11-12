@@ -1,4 +1,4 @@
-source $DIST_ROOT/LFS-instalation/build_scripts/file-processing-start.sh gcc
+source /dist/LFS-instalation/build_scripts/file-processing-start.sh gcc
 
 ln -s gthr-posix.h libgcc/gthr-default.h
 
@@ -17,4 +17,4 @@ cd build
 
 make && make install
 
-source $DIST_ROOT/LFS-instalation/build_scripts/file-cleanup.sh gcc
+source /dist/LFS-instalation/build_scripts/file-cleanup.sh gcc

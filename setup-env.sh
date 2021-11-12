@@ -21,9 +21,10 @@ esac
 
 
 ## DONWLOAD SECTION
+cp -rf ../LFS-instalation $DIST_ROOT
+cp -rf ./* $LFS/sources
 
-sudo cp -rf ../LFS-instalation $DIST_ROOT
-
+cd $LFS/sources
 source packages-download.sh
 
 if ! test $(id -u distbuild); then

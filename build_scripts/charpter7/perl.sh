@@ -1,4 +1,4 @@
-source $DIST_ROOT/LFS-instalation/build_scripts/file-processing-start.sh $(basename $0)
+source /dist/LFS-instalation/build_scripts/file-processing-start.sh $(basename $0)
 
 sh Configure -des                                        \
              -Dprefix=/usr                               \
@@ -12,4 +12,4 @@ sh Configure -des                                        \
 
 make && make install
 
-source $DIST_ROOT/LFS-instalation/build_scripts/file-cleanup.sh $(basename $0)
+source /dist/LFS-instalation/build_scripts/file-cleanup.sh $(basename $0)

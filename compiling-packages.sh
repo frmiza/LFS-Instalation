@@ -8,6 +8,7 @@ if ! test $(whoami) == "distbuild" ; then
 fi
 
 ## CHARPTER 5
+
 mkdir -pv $LFS/sources/log/charpter5
 for package in binutils gcc linux-headers glibc libstdc++ ; do
   bash -e build_scripts/charpter5/${package}.sh | tee $LFS/sources/log/charpter5/${package}.log
@@ -22,4 +23,5 @@ done
 
 ## CHARPTER 7
 
-sudo -E ./build_scripts/charpter7/pre-chroot.sh
+sudo -E ./build_scripts/charpter7/build-chroot.sh
+

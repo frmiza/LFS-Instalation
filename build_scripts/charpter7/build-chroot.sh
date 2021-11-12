@@ -4,7 +4,6 @@ echo "Binding ${DIST_ROOT:?}"
 
 set -e
 echo "Preparing Chroot ${LFS:?}"
-echo ""
 
 chown -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}
 
